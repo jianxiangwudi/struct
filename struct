@@ -1,0 +1,58 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//struct STU
+//	//struct结构体关键字
+//	//STU结构体标签
+//	//struct STU---结构体类型
+//{
+//	char name[20];
+//	short age;
+//	char tele[22];
+//	char sex[5];//成员变量
+//};
+//#include <stdio.h>
+//int main()
+//{
+//	struct STU;
+//
+//	return 0;
+//}
+
+
+#include <stdio.h>
+typedef struct stu
+{
+	char name[20];
+	char sex[20];
+	int a;
+	char tele[20];
+}stu;
+//void print(stu ab)
+//{
+//	printf("个人基本信息");
+//	printf("姓名：%s\n", ab.name);
+//	printf("性别：%s\n", ab.sex);
+//	printf("年龄：%d\n", ab.a);
+//	printf("电话号码：%s\n", ab.tele);
+//}
+void print(stu* ab)
+{
+	printf("姓名：%p\n", ab->name);
+	printf("性别：%p\n", ab->sex);
+	printf("年龄：%d\n", ab->a);
+	printf("电话号码：%p\n", ab->tele);
+}
+int main()
+{
+	stu a = { "张三","男",20,"13245675246" };
+	print(&a);
+	return 0;
+}
+//#include <stdio.h>
+//int main()
+//{
+//	char a[5] = { 0 };
+//	scanf("%s", a);
+//	printf("%s\n", a);
+//
+//	return 0;
+//}  函数栈帧的创建和销毁
